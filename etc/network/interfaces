@@ -7,10 +7,34 @@ source /etc/network/interfaces.d/*
 auto lo
 iface lo inet loopback
 
-# The primary network interface
+# WAN network interface
 auto enp2s0
 iface enp2s0 inet static
     address 192.168.1.3
     netmask 255.255.255.0
     gateway 192.168.1.1
     dns-nameservers 192.168.1.1
+
+# First Class B network interface
+auto enp3s0
+iface enp3s0 inet static
+    address 172.16.1.1
+    netmask 255.255.0.0
+    network 172.16.0.0
+    broadcast 172.16.255.255
+
+# Second Class B network interface
+auto enp4s0
+iface enp4s0 inet static
+    address 172.17.1.1
+    netmask 255.255.0.0
+    network 172.17.0.0
+    broadcast 172.17.255.255
+
+# Third Class B network interface
+auto enp5s0
+iface enp5s0 inet static
+    address 172.18.1.1
+    netmask 255.255.0.0
+    network 172.18.0.0
+    broadcast 172.18.255.255
