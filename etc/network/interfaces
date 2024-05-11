@@ -15,26 +15,26 @@ iface enp2s0 inet static
     gateway 192.168.1.1
     dns-nameservers 1.1.1.1 1.0.0.1 # Cloudflare's DNS
 
-# First Class B network interface
+# Main network
 auto enp3s0
 iface enp3s0 inet static
-    address 172.16.1.1
-    netmask 255.255.0.0
-    network 172.16.0.0
-    broadcast 172.16.255.255
+    address 192.168.2.1
+    netmask 255.255.255.0
+    network 192.168.2.0
+    broadcast 192.168.2.255
 
-# Second Class B network interface
+# Second Network
 auto enp4s0
 iface enp4s0 inet static
-    address 172.17.1.1
-    netmask 255.255.0.0
-    network 172.17.0.0
-    broadcast 172.17.255.255
+    address 192.168.3.1
+    netmask 255.255.255.0
+    network 192.168.3.0
+    broadcast 192.168.3.255
 
-# Third Class B network interface
+# Third network
 auto enp5s0
 iface enp5s0 inet static
-    address 172.18.1.1
-    netmask 255.255.0.0
-    network 172.18.0.0
-    broadcast 172.18.255.255
+    address 192.168.4.1
+    netmask 255.255.255.0
+    network 192.168.4.0
+    broadcast 192.168.4.255
